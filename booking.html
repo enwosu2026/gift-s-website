@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Gift Nwosu | Event Host & Speaker Booking</title>
+<meta name="description" content="Invite Gift Nwosu to host, speak, or moderate at your next event. Share the details of your engagement and expect a reply within 48 hours.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rust:#9B3E1F;--sienna:#C06030;--tan:#C89060;
+  --rose:#C4A898;--blush:#EDD8CC;--cream:#FAF4F0;
+  --dark:#2C1A10;--mid:#6B4030;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Montserrat',sans-serif;color:var(--dark);background:#fff;overflow-x:hidden;}
+img{display:block;max-width:100%;}
+a{text-decoration:none;color:inherit;}
+button{font-family:inherit;cursor:pointer;}
+
+/* ── shared type ── */
+.eyebrow{display:block;font-size:0.68rem;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--sienna);margin-bottom:1rem;}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,4vw,3.6rem);font-weight:300;line-height:1.1;color:var(--dark);margin-bottom:1.4rem;}
+.section-body{font-size:1rem;font-weight:300;line-height:1.95;color:var(--mid);}
+
+/* ── BUTTONS ── */
+.btn{display:inline-block;font-family:'Montserrat',sans-serif;font-weight:700;font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;padding:1.1rem 2.6rem;transition:all 0.22s;cursor:pointer;border:none;}
+.btn-sienna{background:var(--sienna);color:#fff;box-shadow:0 4px 16px rgba(192,96,48,0.35);}
+.btn-sienna:hover{background:var(--rust);transform:translateY(-2px);}
+.btn-dark{background:var(--dark);color:#fff;}
+.btn-dark:hover{background:var(--rust);transform:translateY(-2px);}
+
+/* ════════════════════════════════
+   NAV  (matches index.html)
+════════════════════════════════ */
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:rgba(250,244,240,0.97);
+  border-bottom:0.5px solid var(--blush);
+  backdrop-filter:blur(12px);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.2rem 4rem;
+}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;letter-spacing:0.06em;color:var(--dark);}
+.nav-right{display:flex;align-items:center;gap:3rem;}
+.nav-about{font-size:0.7rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid);transition:color 0.2s;}
+.nav-about:hover{color:var(--sienna);}
+.nav-book{
+  font-family:'Montserrat',sans-serif;font-size:0.7rem;font-weight:700;
+  letter-spacing:0.18em;text-transform:uppercase;color:#fff;background:var(--sienna);
+  padding:0.85rem 2rem;transition:all 0.2s;box-shadow:0 3px 12px rgba(192,96,48,0.3);
+}
+.nav-book:hover{background:var(--rust);}
+
+/* ════════════════════════════════
+   HERO
+════════════════════════════════ */
+#book-hero{
+  background:var(--cream);
+  padding:10rem 5rem 5rem;
+  display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;
+}
+#book-hero .text .eyebrow{color:var(--sienna);}
+#book-hero h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3rem,5.5vw,5.2rem);
+  font-weight:300;line-height:0.95;color:var(--dark);margin-bottom:1.4rem;
+}
+#book-hero h1 em{font-style:italic;color:var(--sienna);}
+#book-hero .lede{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-style:italic;font-weight:300;line-height:1.7;color:var(--mid);max-width:480px;margin-bottom:2.2rem;}
+#book-hero .meta{display:flex;gap:2.4rem;flex-wrap:wrap;margin-bottom:2.4rem;}
+#book-hero .meta div{min-width:120px;}
+#book-hero .meta .k{font-size:0.66rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--rose);margin-bottom:0.5rem;}
+#book-hero .meta .v{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--dark);}
+#book-hero .hero-img{
+  position:relative;aspect-ratio:4/5;background:linear-gradient(135deg,var(--rust) 0%,var(--sienna) 55%,var(--tan) 100%);
+  overflow:hidden;
+}
+#book-hero .hero-img::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 30% 20%,rgba(255,255,255,0.18),transparent 55%),radial-gradient(circle at 75% 80%,rgba(44,26,16,0.35),transparent 60%);
+}
+#book-hero .hero-img .mono{
+  position:absolute;bottom:3rem;left:3rem;right:3rem;
+  font-family:'Cormorant Garamond',serif;color:var(--cream);
+  font-size:clamp(3rem,4.5vw,4.2rem);font-weight:300;font-style:italic;line-height:1;
+}
+#book-hero .hero-img .mono span{display:block;font-family:'Montserrat',sans-serif;font-style:normal;font-size:0.72rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--blush);margin-top:1rem;}
+
+/* ════════════════════════════════
+   ENGAGEMENT TYPES
+════════════════════════════════ */
+#engagements{background:#fff;padding:6rem 5rem;}
+.eng-header{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-bottom:4rem;}
+.eng-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--blush);}
+.eng-card{background:#fff;padding:2.8rem 2rem;display:flex;flex-direction:column;gap:1rem;transition:background 0.3s;}
+.eng-card:hover{background:var(--cream);}
+.eng-card .num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--blush);line-height:1;}
+.eng-card h3{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:400;color:var(--dark);line-height:1.25;}
+.eng-card p{font-size:0.88rem;font-weight:300;line-height:1.85;color:var(--mid);flex:1;}
+.eng-card .rule{width:28px;height:1px;background:var(--tan);margin-top:auto;}
+
+/* ════════════════════════════════
+   PROCESS
+════════════════════════════════ */
+#process{background:var(--dark);padding:6rem 5rem;display:grid;grid-template-columns:1fr 1.5fr;gap:6rem;align-items:start;}
+#process .eyebrow{color:var(--tan);}
+#process .section-title{color:var(--cream);}
+#process .intro{font-size:1rem;font-weight:300;line-height:1.9;color:var(--rose);max-width:320px;margin-top:0.5rem;}
+.proc-grid{display:grid;grid-template-columns:1fr 1fr;border-top:0.5px solid rgba(196,168,152,0.2);border-left:0.5px solid rgba(196,168,152,0.2);}
+.proc-item{padding:2.4rem 2rem;border-bottom:0.5px solid rgba(196,168,152,0.2);border-right:0.5px solid rgba(196,168,152,0.2);}
+.proc-item .step{font-family:'Cormorant Garamond',serif;font-size:0.8rem;font-weight:500;letter-spacing:0.24em;text-transform:uppercase;color:var(--tan);margin-bottom:0.8rem;display:block;}
+.proc-item h4{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:var(--cream);margin-bottom:0.8rem;}
+.proc-item p{font-size:0.88rem;font-weight:300;line-height:1.85;color:var(--rose);}
+
+/* ════════════════════════════════
+   FORM
+════════════════════════════════ */
+#form-section{background:var(--cream);padding:7rem 5rem;display:grid;grid-template-columns:1fr 1.6fr;gap:5rem;align-items:start;}
+.form-intro .section-title{color:var(--dark);}
+.form-intro .section-body{margin-bottom:2rem;max-width:340px;}
+.form-intro .aside{
+  border-left:2px solid var(--sienna);padding:1rem 0 1rem 1.4rem;margin-top:2rem;
+  font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;color:var(--mid);line-height:1.6;
+}
+.form-intro .stamp{
+  display:inline-block;margin-top:2rem;padding:0.55rem 1.4rem;
+  background:#fff;color:var(--rust);font-size:0.66rem;font-weight:700;
+  letter-spacing:0.22em;text-transform:uppercase;border:1px solid var(--blush);
+}
+
+form.booking-form{background:#fff;padding:3.2rem 3rem;box-shadow:0 2px 32px rgba(44,26,16,0.06);}
+.fieldset{margin-bottom:2.4rem;}
+.fieldset legend{
+  font-family:'Cormorant Garamond',serif;font-size:0.85rem;font-weight:500;
+  letter-spacing:0.2em;text-transform:uppercase;color:var(--rust);
+  padding-bottom:0.8rem;margin-bottom:1.4rem;border-bottom:1px solid var(--blush);width:100%;
+}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-bottom:1.2rem;}
+.row.triple{grid-template-columns:repeat(3,1fr);}
+.field{display:flex;flex-direction:column;}
+.field.full{grid-column:1/-1;}
+.field label{
+  font-size:0.68rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--mid);margin-bottom:0.55rem;
+}
+.field label .req{color:var(--sienna);margin-left:0.2rem;}
+.field input,.field select,.field textarea{
+  font-family:'Montserrat',sans-serif;font-size:0.92rem;font-weight:400;color:var(--dark);
+  background:transparent;border:none;border-bottom:1px solid var(--blush);
+  padding:0.75rem 0;transition:border-color 0.2s;outline:none;
+}
+.field textarea{min-height:130px;border:1px solid var(--blush);padding:0.9rem 1rem;resize:vertical;line-height:1.6;}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--sienna);}
+.field select{appearance:none;-webkit-appearance:none;background:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3e%3cpath d='M0 0l5 6 5-6z' fill='%236B4030'/%3e%3c/svg%3e") no-repeat right 0.25rem center;padding-right:1.5rem;}
+.field .hint{font-size:0.72rem;font-weight:300;color:var(--rose);margin-top:0.4rem;line-height:1.5;}
+
+/* type chips */
+.chips{display:flex;flex-wrap:wrap;gap:0.6rem;}
+.chip{position:relative;}
+.chip input{position:absolute;opacity:0;inset:0;cursor:pointer;}
+.chip span{
+  display:inline-block;padding:0.7rem 1.3rem;border:1px solid var(--blush);
+  font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--mid);transition:all 0.2s;cursor:pointer;user-select:none;
+}
+.chip input:checked + span{background:var(--sienna);border-color:var(--sienna);color:#fff;}
+.chip:hover span{border-color:var(--sienna);color:var(--sienna);}
+.chip input:checked + span:hover{color:#fff;}
+
+.submit-row{display:flex;align-items:center;justify-content:space-between;gap:2rem;margin-top:1rem;flex-wrap:wrap;}
+.submit-row .privacy{font-size:0.72rem;font-weight:300;line-height:1.6;color:var(--mid);max-width:320px;}
+.submit-row button{
+  background:var(--rust);color:#fff;border:none;padding:1.2rem 3rem;
+  font-size:0.75rem;font-weight:700;letter-spacing:0.24em;text-transform:uppercase;
+  box-shadow:0 6px 24px rgba(155,62,31,0.3);transition:all 0.2s;
+}
+.submit-row button:hover{background:var(--dark);transform:translateY(-2px);}
+
+/* success message */
+.form-success{display:none;background:var(--cream);border-left:4px solid var(--sienna);padding:2rem;margin-top:1.5rem;}
+.form-success h4{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--rust);margin-bottom:0.5rem;}
+.form-success p{font-size:0.9rem;color:var(--mid);line-height:1.7;}
+.form-success.show{display:block;}
+
+/* ════════════════════════════════
+   FAQ
+════════════════════════════════ */
+#faq{background:#fff;padding:6rem 5rem;}
+.faq-wrap{max-width:900px;margin:0 auto;}
+.faq-wrap .section-title{text-align:center;}
+.faq-wrap .section-body{text-align:center;max-width:520px;margin:0 auto 3.5rem;}
+.faq-item{border-top:1px solid var(--blush);padding:1.8rem 0;}
+.faq-item:last-of-type{border-bottom:1px solid var(--blush);}
+.faq-item summary{
+  list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;
+  font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:400;color:var(--dark);
+}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:"+";font-family:'Montserrat',sans-serif;font-size:1.4rem;font-weight:300;color:var(--sienna);transition:transform 0.2s;}
+.faq-item[open] summary::after{transform:rotate(45deg);}
+.faq-item p{font-size:0.94rem;font-weight:300;line-height:1.9;color:var(--mid);margin-top:1rem;max-width:720px;}
+
+/* ════════════════════════════════
+   CTA BAND
+════════════════════════════════ */
+#cta{background:var(--rust);padding:5rem 5rem;text-align:center;}
+#cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:300;color:var(--cream);margin-bottom:0.8rem;}
+#cta p{font-size:0.95rem;color:var(--blush);margin-bottom:2rem;font-weight:300;}
+#cta a{
+  display:inline-block;padding:1.2rem 3rem;background:#fff;color:var(--rust);
+  font-family:'Montserrat',sans-serif;font-size:0.78rem;font-weight:700;letter-spacing:0.24em;
+  text-transform:uppercase;transition:all 0.2s;box-shadow:0 6px 24px rgba(0,0,0,0.2);
+}
+#cta a:hover{background:var(--cream);transform:translateY(-3px);}
+
+/* ════════════════════════════════
+   FOOTER (matches index.html)
+════════════════════════════════ */
+#footer{background:var(--dark);padding:5rem 5rem 2.5rem;}
+.footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:4rem;padding-bottom:3.5rem;border-bottom:0.5px solid rgba(196,168,152,0.18);margin-bottom:2.5rem;}
+.f-logo{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:300;color:var(--cream);display:block;margin-bottom:1.2rem;}
+.f-tagline{font-size:0.85rem;font-weight:300;line-height:1.9;color:var(--rose);}
+.f-social{display:flex;gap:0.8rem;margin-top:1.8rem;flex-wrap:wrap;}
+.f-pill{display:inline-flex;align-items:center;gap:0.4rem;padding:0.5rem 1.1rem;border:0.5px solid rgba(196,168,152,0.25);font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--rose);transition:all 0.2s;}
+.f-pill:hover{border-color:var(--tan);color:var(--blush);}
+.f-col-title{font-size:0.68rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--tan);margin-bottom:1.5rem;display:block;}
+.f-col a{display:block;font-size:0.82rem;font-weight:300;color:var(--rose);margin-bottom:0.9rem;transition:color 0.2s;}
+.f-col a:hover{color:var(--blush);}
+.f-note{font-size:0.78rem;font-weight:300;line-height:1.8;color:var(--rose);margin-top:0.5rem;}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;}
+.f-copy{font-size:0.7rem;font-weight:300;color:rgba(196,168,152,0.4);letter-spacing:0.06em;}
+
+/* ════════════════════════════════════════
+   MOBILE ≤ 768px
+════════════════════════════════════════ */
+@media(max-width:768px){
+  #nav{padding:0.9rem 1.4rem;}
+  .nav-logo{font-size:1.1rem;}
+  .nav-right{gap:1.4rem;}
+  .nav-about{font-size:0.6rem;letter-spacing:0.15em;}
+  .nav-book{padding:0.65rem 1rem;font-size:0.6rem;letter-spacing:0.14em;}
+
+  #book-hero{grid-template-columns:1fr;padding:6.5rem 1.4rem 3rem;gap:2.5rem;}
+  #book-hero h1{font-size:clamp(2.6rem,10vw,3.4rem);}
+  #book-hero .lede{font-size:1.05rem;}
+  #book-hero .hero-img{aspect-ratio:5/4;order:-1;}
+  #book-hero .hero-img .mono{bottom:1.5rem;left:1.5rem;right:1.5rem;font-size:2.2rem;}
+  #book-hero .meta{gap:1.4rem;}
+
+  #engagements{padding:3.5rem 1.4rem;}
+  .eng-header{grid-template-columns:1fr;gap:1rem;margin-bottom:2.2rem;}
+  .eng-grid{grid-template-columns:1fr;gap:2px;}
+  .eng-card{padding:2rem 1.4rem;}
+
+  #process{padding:3.5rem 1.4rem;grid-template-columns:1fr;gap:2.5rem;}
+  .proc-grid{grid-template-columns:1fr;}
+  .proc-item{padding:1.8rem 1.4rem;}
+
+  #form-section{padding:3.5rem 1.4rem;grid-template-columns:1fr;gap:2.2rem;}
+  form.booking-form{padding:2rem 1.4rem;}
+  .row,.row.triple{grid-template-columns:1fr;gap:0.4rem;}
+  .submit-row{flex-direction:column;align-items:stretch;gap:1.2rem;}
+  .submit-row button{width:100%;padding:1.1rem 1rem;}
+
+  #faq{padding:3.5rem 1.4rem;}
+  .faq-item summary{font-size:1.1rem;}
+
+  #cta{padding:3rem 1.4rem;}
+
+  #footer{padding:3rem 1.4rem 2rem;}
+  .footer-top{grid-template-columns:1fr;gap:2.2rem;padding-bottom:2rem;}
+  .footer-bottom{flex-direction:column;gap:0.6rem;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html#hero" class="nav-logo">Gift Nwosu</a>
+  <div class="nav-right">
+    <a href="index.html#about" class="nav-about">About</a>
+    <a href="booking.html" class="nav-book">Book Gift</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="book-hero">
+  <div class="text">
+    <span class="eyebrow">Booking · 2026 Engagements</span>
+    <h1>Invite Gift to <em>your stage.</em></h1>
+    <p class="lede">A considered, warm, and precise presence for gatherings that matter — from launches and galas to panels, retreats, and sacred moments in-between.</p>
+    <div class="meta">
+      <div>
+        <span class="k">Response</span>
+        <span class="v">Within 48 hours</span>
+      </div>
+      <div>
+        <span class="k">Availability</span>
+        <span class="v">Limited · 2026</span>
+      </div>
+      <div>
+        <span class="k">Travels</span>
+        <span class="v">Worldwide</span>
+      </div>
+    </div>
+    <a href="#form-section" class="btn btn-sienna">Begin Your Inquiry</a>
+  </div>
+  <div class="hero-img" aria-hidden="true">
+    <div class="mono">
+      Gift<br><em>Nwosu</em>
+      <span>Event Host · Speaker · Compere</span>
+    </div>
+  </div>
+</section>
+
+<!-- ENGAGEMENT TYPES -->
+<section id="engagements">
+  <div class="eng-header">
+    <div>
+      <span class="eyebrow">Ways to Work Together</span>
+      <h2 class="section-title">Four rooms<br>she holds well.</h2>
+    </div>
+    <p class="section-body">Each engagement is shaped around your audience, your message, and the arc you want the day to follow. Select whichever best fits — there's space to elaborate in the form.</p>
+  </div>
+  <div class="eng-grid">
+    <article class="eng-card">
+      <span class="num">01</span>
+      <h3>Event Hosting &amp; MC</h3>
+      <p>Weddings, galas, conferences, launches. Gift carries the room with warmth, pace, and care for every named guest and hidden logistic.</p>
+      <span class="rule"></span>
+    </article>
+    <article class="eng-card">
+      <span class="num">02</span>
+      <h3>Keynote &amp; Speaking</h3>
+      <p>Talks on faith, presence, women's voice, and intentional living — tailored to your audience with original, unhurried prose.</p>
+      <span class="rule"></span>
+    </article>
+    <article class="eng-card">
+      <span class="num">03</span>
+      <h3>Panel Moderation</h3>
+      <p>Conversations where every panellist is heard and every audience question lands. Prep is thorough; the hour is generous.</p>
+      <span class="rule"></span>
+    </article>
+    <article class="eng-card">
+      <span class="num">04</span>
+      <h3>Compere &amp; Ceremony</h3>
+      <p>Cultural, corporate, and sacred ceremonies that ask for both reverence and flow. Scripted with you, carried with grace.</p>
+      <span class="rule"></span>
+    </article>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div>
+    <span class="eyebrow">What to Expect</span>
+    <h2 class="section-title">A simple, <br>considered path.</h2>
+    <p class="intro">From first inquiry to the moment she steps on stage — four clear beats, no surprises.</p>
+  </div>
+  <div class="proc-grid">
+    <div class="proc-item">
+      <span class="step">Step 01</span>
+      <h4>Share the details</h4>
+      <p>Fill out the form with the basics of your event — date, format, audience, and what success looks like to you.</p>
+    </div>
+    <div class="proc-item">
+      <span class="step">Step 02</span>
+      <h4>Response within 48 hrs</h4>
+      <p>Gift's team reviews every inquiry personally. You'll hear back with availability, a fit note, and next steps.</p>
+    </div>
+    <div class="proc-item">
+      <span class="step">Step 03</span>
+      <h4>Discovery call</h4>
+      <p>A 30-minute call to align on tone, timing, and the particular texture of the gathering.</p>
+    </div>
+    <div class="proc-item">
+      <span class="step">Step 04</span>
+      <h4>Confirmation &amp; craft</h4>
+      <p>Agreement signed, deposit secured, and the quiet work of preparing your room begins — script, rehearsal, and day-of presence.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section id="form-section">
+  <div class="form-intro">
+    <span class="eyebrow">Booking Inquiry</span>
+    <h2 class="section-title">Tell us about your event.</h2>
+    <p class="section-body">The more context you can share, the more specifically Gift can respond. No field is too small — the texture matters.</p>
+    <div class="aside">"Every room has its own weather. My job is to read it — and invite everyone inside."</div>
+    <span class="stamp">48-hour reply · Always personal</span>
+  </div>
+
+  <form class="booking-form" id="bookingForm" novalidate>
+
+    <fieldset class="fieldset">
+      <legend>Your Details</legend>
+      <div class="row">
+        <div class="field">
+          <label for="fullName">Full name<span class="req">*</span></label>
+          <input type="text" id="fullName" name="fullName" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="organization">Organization / Host</label>
+          <input type="text" id="organization" name="organization" autocomplete="organization">
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="email">Email<span class="req">*</span></label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel">
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="fieldset">
+      <legend>Event Details</legend>
+
+      <div class="field full" style="margin-bottom:1.4rem;">
+        <label>Engagement type<span class="req">*</span></label>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="engagement" value="Hosting / MC" required><span>Hosting / MC</span></label>
+          <label class="chip"><input type="radio" name="engagement" value="Keynote / Speaking"><span>Keynote / Speaking</span></label>
+          <label class="chip"><input type="radio" name="engagement" value="Panel Moderation"><span>Panel Moderation</span></label>
+          <label class="chip"><input type="radio" name="engagement" value="Compere / Ceremony"><span>Compere / Ceremony</span></label>
+          <label class="chip"><input type="radio" name="engagement" value="Other"><span>Other</span></label>
+        </div>
+      </div>
+
+      <div class="row triple">
+        <div class="field">
+          <label for="eventDate">Event date<span class="req">*</span></label>
+          <input type="date" id="eventDate" name="eventDate" required>
+        </div>
+        <div class="field">
+          <label for="eventTime">Start time</label>
+          <input type="time" id="eventTime" name="eventTime">
+        </div>
+        <div class="field">
+          <label for="duration">Duration</label>
+          <select id="duration" name="duration">
+            <option value="">Select…</option>
+            <option>Up to 1 hour</option>
+            <option>1–2 hours</option>
+            <option>Half day</option>
+            <option>Full day</option>
+            <option>Multi-day</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="location">Venue / City<span class="req">*</span></label>
+          <input type="text" id="location" name="location" required placeholder="e.g. Lagos, Nigeria">
+        </div>
+        <div class="field">
+          <label for="format">Format</label>
+          <select id="format" name="format">
+            <option value="">Select…</option>
+            <option>In-person</option>
+            <option>Virtual</option>
+            <option>Hybrid</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="guests">Expected audience size</label>
+          <select id="guests" name="guests">
+            <option value="">Select…</option>
+            <option>Under 50</option>
+            <option>50–200</option>
+            <option>200–500</option>
+            <option>500–1,000</option>
+            <option>1,000+</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="budget">Budget range</label>
+          <select id="budget" name="budget">
+            <option value="">Prefer not to say</option>
+            <option>Under $2,500</option>
+            <option>$2,500 – $5,000</option>
+            <option>$5,000 – $10,000</option>
+            <option>$10,000 – $25,000</option>
+            <option>$25,000+</option>
+          </select>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="fieldset">
+      <legend>Tell Us More</legend>
+      <div class="field full">
+        <label for="message">The arc you want for the day<span class="req">*</span></label>
+        <textarea id="message" name="message" required placeholder="Who is in the room? What do you want them to feel by the end? Any speakers, segments, or cultural moments we should know about?"></textarea>
+        <p class="hint">A short paragraph is plenty — specifics beat length.</p>
+      </div>
+      <div class="field full" style="margin-top:1.2rem;">
+        <label for="referral">How did you hear about Gift?</label>
+        <input type="text" id="referral" name="referral" placeholder="Referral, podcast, search, a prior event…">
+      </div>
+    </fieldset>
+
+    <!-- Honeypot: hidden from humans, bots fill it and we silently drop their submissions. -->
+    <div aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">
+      <label for="hp_company">Company (leave blank)</label>
+      <input type="text" id="hp_company" name="hp_company" tabindex="-1" autocomplete="off">
+    </div>
+
+    <div class="submit-row">
+      <p class="privacy">Your details are used only to respond to this inquiry. They are never shared or added to a mailing list.</p>
+      <button type="submit" id="submitBtn">Send Inquiry</button>
+    </div>
+
+    <div class="form-success" id="formSuccess">
+      <h4 id="formSuccessTitle">Thank you — received.</h4>
+      <p id="formSuccessBody">Your inquiry is in. Expect a personal reply from Gift's team within 48 hours. In the meantime, you can revisit our <a href="index.html#services" style="color:var(--sienna);text-decoration:underline;">services</a> or the <a href="index.html#podcast" style="color:var(--sienna);text-decoration:underline;">Breathe Through podcast</a>.</p>
+    </div>
+  </form>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="faq-wrap">
+    <span class="eyebrow" style="text-align:center;display:block;">Before You Send</span>
+    <h2 class="section-title">A few things<br>worth knowing.</h2>
+    <p class="section-body">The answers to the questions we hear most often.</p>
+
+    <details class="faq-item">
+      <summary>How far in advance should I book?</summary>
+      <p>For flagship events, six to twelve months is ideal. Shorter timelines are considered case-by-case — send the inquiry and we'll tell you honestly if we can do it justice.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Does Gift travel internationally?</summary>
+      <p>Yes. Travel, accommodation, and a small per-diem are typically arranged by the host for events outside Lagos. These details are finalized on the discovery call.</p>
+    </details>
+    <details class="faq-item">
+      <summary>What does the fee cover?</summary>
+      <p>Preparation (scripting, rehearsal, stakeholder calls), day-of presence, and a debrief after. Any travel, specialty styling, or additional content is quoted separately and transparently.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Can I book Gift for a private or family event?</summary>
+      <p>She does a small number of private weddings, dedications, and milestone ceremonies each year. Please share the context in the form and we'll let you know quickly if it's a fit.</p>
+    </details>
+    <details class="faq-item">
+      <summary>What's the booking policy?</summary>
+      <p>A signed agreement and a 50% deposit secure the date. The balance is due 14 days before the event. Cancellation terms are detailed in the agreement.</p>
+    </details>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section id="cta">
+  <h2>Still deciding?</h2>
+  <p>Reach out directly — Gift reads every note.</p>
+  <a href="mailto:hello@giftnwosu.com">hello@giftnwosu.com</a>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-top">
+    <div>
+      <a href="index.html#hero" class="f-logo">Gift Nwosu</a>
+      <p class="f-tagline">Event Host · Speaker · Compere<br>Creating intentional, engaging experiences.</p>
+      <div class="f-social">
+        <a href="https://www.youtube.com/@Breathethroughpodcast" target="_blank" rel="noopener" class="f-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>YouTube
+        </a>
+        <a href="https://open.spotify.com/show/4H5yCYiS0COxXzudXWnxZX" target="_blank" rel="noopener" class="f-pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>Spotify
+        </a>
+      </div>
+    </div>
+    <div class="f-col">
+      <span class="f-col-title">Navigate</span>
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#podcast">Breathe Through Podcast</a>
+      <a href="booking.html">Book Gift</a>
+    </div>
+    <div class="f-col">
+      <span class="f-col-title">Contact</span>
+      <a href="mailto:hello@giftnwosu.com">hello@giftnwosu.com</a>
+      <p class="f-note">Inquiries responded to within 48 hours.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="f-copy">&copy; 2026 Gift Nwosu. All rights reserved.</p>
+    <p class="f-copy">Crafted with intention.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // ─── CONFIG ────────────────────────────────────────────────────────
+  // Paste the Apps Script deployment /exec URL here after deploying Code.gs.
+  // Example: https://script.google.com/macros/s/AKfycbx.../exec
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbyjzadSGWInU0iK4sWUugCRMoNIeb3Hshv1TOUtTO3q4_dKhBlLRNbdSrj8P9dSCRZ5Pw/exec';
+
+  // Fallback email used if the endpoint is unreachable (e.g. Apps Script down).
+  var FALLBACK_EMAIL = 'hello@giftnwosu.com';
+
+  var form     = document.getElementById('bookingForm');
+  var success  = document.getElementById('formSuccess');
+  var successT = document.getElementById('formSuccessTitle');
+  var successB = document.getElementById('formSuccessBody');
+  var submitBtn = document.getElementById('submitBtn');
+  if(!form) return;
+
+  // Capture marketing attribution + source context once, on load.
+  var url = new URL(window.location.href);
+  var attribution = {
+    utm_source:   url.searchParams.get('utm_source')   || '',
+    utm_medium:   url.searchParams.get('utm_medium')   || '',
+    utm_campaign: url.searchParams.get('utm_campaign') || '',
+    utm_term:     url.searchParams.get('utm_term')     || '',
+    utm_content:  url.searchParams.get('utm_content')  || '',
+    page_referrer: document.referrer || '',
+    page_path:     window.location.pathname + window.location.search,
+    user_agent:    navigator.userAgent || ''
+  };
+
+  function setSuccess(title, body, isError){
+    successT.textContent = title;
+    successB.innerHTML   = body;
+    success.style.borderLeftColor = isError ? '#9B3E1F' : 'var(--sienna)';
+    successT.style.color          = isError ? '#9B3E1F' : 'var(--rust)';
+    success.classList.add('show');
+    success.scrollIntoView({behavior:'smooth', block:'center'});
+  }
+
+  function validate(){
+    var required = form.querySelectorAll('[required]');
+    var ok = true;
+    required.forEach(function(el){
+      el.style.borderColor = '';
+      if(!el.value){ ok = false; el.style.borderColor = '#9B3E1F'; }
+    });
+    // Radio group (engagement type)
+    if(!form.querySelector('input[name="engagement"]:checked')) ok = false;
+    return ok;
+  }
+
+  function encodeForm(fd){
+    // application/x-www-form-urlencoded keeps the request "simple" and
+    // avoids a CORS preflight, which Apps Script web apps don't handle.
+    var pairs = [];
+    fd.forEach(function(v,k){
+      pairs.push(encodeURIComponent(k) + '=' + encodeURIComponent(v));
+    });
+    return pairs.join('&');
+  }
+
+  function mailtoFallback(fd){
+    var body = '';
+    fd.forEach(function(v,k){
+      if (k.indexOf('hp_') === 0 || k === 'user_agent') return;
+      body += k + ': ' + v + '\n';
+    });
+    return 'mailto:' + FALLBACK_EMAIL
+      + '?subject=' + encodeURIComponent('Booking Inquiry — ' + (fd.get('fullName')||''))
+      + '&body=' + encodeURIComponent(body);
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!validate()){
+      setSuccess('Please complete the required fields.',
+                 'A few details are still missing — the fields highlighted in rust above.',
+                 true);
+      return;
+    }
+
+    var fd = new FormData(form);
+    Object.keys(attribution).forEach(function(k){ fd.set(k, attribution[k]); });
+
+    submitBtn.disabled = true;
+    var originalLabel = submitBtn.textContent;
+    submitBtn.textContent = 'Sending…';
+
+    // Endpoint not configured yet → fall back to mailto so the page still works.
+    if (!ENDPOINT || ENDPOINT.indexOf('YOUR_APPS_SCRIPT_URL_HERE') !== -1) {
+      window.location.href = mailtoFallback(fd);
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalLabel;
+      setSuccess('Opening your email app…',
+                 'The intake endpoint isn\'t configured yet, so we handed your details to your mail client as a backup.',
+                 false);
+      return;
+    }
+
+    fetch(ENDPOINT, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'},
+      body: encodeForm(fd)
+    })
+    .then(function(r){ return r.json().catch(function(){ return {ok:true}; }); })
+    .then(function(res){
+      if(res && res.ok){
+        setSuccess('Thank you — received.',
+          'Your inquiry is logged. Expect a personal reply from Gift\'s team within 48 hours. In the meantime, visit our <a href="index.html#services" style="color:var(--sienna);text-decoration:underline;">services</a> or the <a href="index.html#podcast" style="color:var(--sienna);text-decoration:underline;">Breathe Through podcast</a>.',
+          false);
+        form.reset();
+      } else {
+        throw new Error((res && res.error) || 'Unknown error');
+      }
+    })
+    .catch(function(err){
+      console.error('Submission failed:', err);
+      setSuccess('Couldn\'t reach the server.',
+        'We\'ve opened your mail app with your details as a backup — just hit send. Or try again in a moment.',
+        true);
+      window.location.href = mailtoFallback(fd);
+    })
+    .finally(function(){
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalLabel;
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
