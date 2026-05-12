@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Gift Nwosu | Event Host & Speaker</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rust:#9B3E1F;--sienna:#C06030;--tan:#C89060;
+  --rose:#C4A898;--blush:#EDD8CC;--cream:#FAF4F0;
+  --dark:#2C1A10;--mid:#6B4030;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Montserrat',sans-serif;color:var(--dark);background:#fff;overflow-x:hidden;}
+img{display:block;max-width:100%;}
+a{text-decoration:none;}
+
+/* NAV */
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:rgba(250,244,240,0.97);border-bottom:0.5px solid var(--blush);
+  backdrop-filter:blur(12px);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.2rem 4rem;
+}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;letter-spacing:0.06em;color:var(--dark);}
+.nav-home{font-size:0.7rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid);transition:color 0.2s;}
+.nav-home:hover{color:var(--sienna);}
+
+/* HERO STRIP */
+.page-hero{
+  padding-top:68px;
+  background:var(--dark);
+  min-height:340px;
+  display:flex;align-items:flex-end;
+  padding-bottom:0;
+  position:relative;
+  overflow:hidden;
+}
+.page-hero-inner{
+  padding:4rem 5rem 3.5rem;
+  position:relative;z-index:2;
+  max-width:700px;
+}
+.page-hero .eyebrow{
+  display:block;font-size:0.68rem;font-weight:600;
+  letter-spacing:0.26em;text-transform:uppercase;
+  color:var(--tan);margin-bottom:1rem;
+}
+.page-hero h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.8rem,5vw,4.5rem);
+  font-weight:300;line-height:1.05;
+  color:var(--cream);margin-bottom:1.2rem;
+}
+.page-hero h1 em{font-style:italic;color:var(--sienna);}
+.page-hero p{
+  font-size:0.95rem;font-weight:300;line-height:1.9;
+  color:var(--rose);max-width:560px;
+}
+/* decorative rule */
+.page-hero::after{
+  content:'';
+  position:absolute;bottom:0;left:0;right:0;
+  height:4px;background:var(--sienna);
+}
+
+/* WHAT TO EXPECT */
+.expect{
+  background:var(--cream);
+  padding:4rem 5rem;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:2px;
+  border-bottom:0.5px solid var(--blush);
+}
+.expect-item{
+  padding:2.5rem 2rem;
+  background:#fff;
+  border-right:0.5px solid var(--blush);
+}
+.expect-item:last-child{border-right:none;}
+.expect-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2.5rem;font-weight:300;color:var(--blush);
+  line-height:1;margin-bottom:1rem;
+}
+.expect-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.2rem;font-weight:400;color:var(--dark);
+  margin-bottom:0.6rem;
+}
+.expect-body{font-size:0.82rem;font-weight:300;line-height:1.85;color:var(--mid);}
+
+/* FORM SECTION */
+.form-section{
+  display:grid;
+  grid-template-columns:1fr 1.8fr;
+  min-height:800px;
+}
+.form-sidebar{
+  background:var(--sienna);
+  padding:5rem 3.5rem;
+  display:flex;flex-direction:column;justify-content:flex-start;
+}
+.form-sidebar .eyebrow{
+  display:block;font-size:0.65rem;font-weight:600;
+  letter-spacing:0.26em;text-transform:uppercase;
+  color:var(--blush);margin-bottom:1rem;
+}
+.form-sidebar h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.8rem,3vw,2.6rem);
+  font-weight:300;line-height:1.15;
+  color:#fff;margin-bottom:2rem;
+}
+.sidebar-list{list-style:none;margin-bottom:3rem;}
+.sidebar-list li{
+  display:flex;align-items:flex-start;gap:0.8rem;
+  font-size:0.82rem;font-weight:300;line-height:1.8;
+  color:rgba(255,255,255,0.85);margin-bottom:1rem;
+}
+.sidebar-list li::before{
+  content:'';
+  width:20px;height:1px;background:var(--blush);
+  flex-shrink:0;margin-top:0.65rem;
+}
+.sidebar-note{
+  background:rgba(0,0,0,0.15);
+  padding:1.5rem;
+  border-left:2px solid var(--blush);
+}
+.sidebar-note p{font-size:0.78rem;font-weight:300;line-height:1.8;color:rgba(255,255,255,0.8);}
+.sidebar-note strong{color:#fff;font-weight:600;}
+
+.form-main{
+  background:var(--cream);
+  padding:5rem 5rem;
+}
+.form-main h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.8rem;font-weight:300;color:var(--dark);
+  margin-bottom:0.5rem;
+}
+.form-main .sub{
+  font-size:0.82rem;font-weight:300;color:var(--mid);
+  margin-bottom:3rem;line-height:1.7;
+}
+
+/* NATIVE FORM STYLES */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem 2rem;}
+.form-group{display:flex;flex-direction:column;gap:0.5rem;}
+.form-group.full{grid-column:1/-1;}
+.form-group label{
+  font-size:0.65rem;font-weight:700;letter-spacing:0.18em;
+  text-transform:uppercase;color:var(--mid);
+}
+.form-group input,
+.form-group select,
+.form-group textarea{
+  font-family:'Montserrat',sans-serif;
+  font-size:0.88rem;font-weight:300;
+  color:var(--dark);background:#fff;
+  border:0.5px solid var(--rose);
+  padding:0.9rem 1rem;
+  outline:none;
+  transition:border-color 0.2s;
+  width:100%;
+  border-radius:0;
+  -webkit-appearance:none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{border-color:var(--sienna);}
+.form-group textarea{resize:vertical;min-height:130px;line-height:1.7;}
+.form-group select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B4030' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 1rem center;
+  padding-right:2.5rem;cursor:pointer;
+}
+.form-submit{
+  margin-top:2.5rem;
+  display:flex;align-items:center;gap:2rem;flex-wrap:wrap;
+}
+.submit-btn{
+  font-family:'Montserrat',sans-serif;font-size:0.72rem;font-weight:700;
+  letter-spacing:0.2em;text-transform:uppercase;
+  color:#fff;background:var(--sienna);
+  padding:1.2rem 3rem;border:none;cursor:pointer;
+  transition:all 0.22s;box-shadow:0 4px 16px rgba(192,96,48,0.35);
+}
+.submit-btn:hover{background:var(--rust);transform:translateY(-2px);box-shadow:0 6px 22px rgba(155,62,31,0.4);}
+.form-note{font-size:0.75rem;font-weight:300;color:var(--mid);line-height:1.6;}
+
+/* SUCCESS MESSAGE */
+.success-msg{
+  display:none;
+  background:var(--cream);
+  border:0.5px solid var(--tan);
+  padding:2rem;
+  margin-top:2rem;
+  text-align:center;
+}
+.success-msg h4{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--dark);margin-bottom:0.5rem;}
+.success-msg p{font-size:0.85rem;font-weight:300;color:var(--mid);line-height:1.8;}
+
+/* TALLY OPTION (hidden by default swap with native form if using Tally) */
+.tally-embed{display:none;}
+
+/* FOOTER */
+#footer{background:var(--dark);padding:3.5rem 5rem 2rem;}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.f-logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;color:var(--cream);}
+.f-copy{font-size:0.7rem;font-weight:300;color:rgba(196,168,152,0.4);}
+.f-back{font-size:0.65rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--tan);transition:color 0.2s;}
+.f-back:hover{color:var(--blush);}
+
+/* MOBILE */
+@media(max-width:768px){
+  #nav{padding:1rem 1.5rem;}
+  .nav-logo{font-size:1.15rem;}
+  .page-hero-inner{padding:3rem 1.5rem 2.5rem;}
+  .page-hero h1{font-size:2.4rem;}
+  .expect{grid-template-columns:1fr;padding:2rem 1.5rem;gap:1px;}
+  .expect-item{border-right:none;border-bottom:0.5px solid var(--blush);padding:2rem 1.5rem;}
+  .expect-item:last-child{border-bottom:none;}
+  .form-section{grid-template-columns:1fr;}
+  .form-sidebar{padding:3rem 1.5rem;}
+  .form-main{padding:3rem 1.5rem;}
+  .form-grid{grid-template-columns:1fr;}
+  .form-group.full{grid-column:1;}
+  .submit-btn{width:100%;text-align:center;padding:1.2rem;}
+  #footer{padding:2.5rem 1.5rem 1.5rem;}
+  .footer-bottom{flex-direction:column;text-align:center;gap:0.5rem;}
+}
+
+/* FAQ + POLICY */
+.faq-section{
+  background:#fff;
+  padding:6rem 5rem;
+  border-top:0.5px solid var(--blush);
+}
+.faq-inner{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:6rem;
+}
+.faq-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2rem,3.5vw,2.8rem);
+  font-weight:300;line-height:1.1;
+  color:var(--dark);margin-bottom:2.5rem;
+}
+.faq-item{
+  padding:1.8rem 0;
+  border-bottom:0.5px solid var(--blush);
+}
+.faq-item:last-child{border-bottom:none;}
+.faq-item h4{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.2rem;font-weight:400;
+  color:var(--dark);margin-bottom:0.6rem;
+}
+.faq-item p{
+  font-size:0.85rem;font-weight:300;
+  line-height:1.85;color:var(--mid);
+}
+.faq-item a{color:var(--sienna);font-weight:500;}
+.faq-item a:hover{color:var(--rust);}
+
+@media(max-width:768px){
+  .faq-section{padding:3.5rem 1.5rem;}
+  .faq-inner{grid-template-columns:1fr;gap:3rem;}
+  .faq-title{font-size:2rem;margin-bottom:1.5rem;}
+  .faq-item{padding:1.4rem 0;}
+  .faq-item h4{font-size:1.1rem;}
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header id="nav">
+  <a href="index.html" class="nav-logo">Gift Nwosu</a>
+  <a href="index.html" class="nav-home">← Back to Home</a>
+</header>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="eyebrow">Now Booking · Limited 2026 Engagements</span>
+    <h1>Book <em>Gift</em><br>for Your Event</h1>
+    <p>Gift partners with brands, organizations, and communities to deliver high-impact hosting and speaking experiences. Each engagement is thoughtfully curated for excellence and lasting impact.</p>
+  </div>
+</div>
+
+<!-- WHAT TO EXPECT -->
+<div class="expect">
+  <div class="expect-item">
+    <div class="expect-num">01</div>
+    <h3 class="expect-title">Submit Your Inquiry</h3>
+    <p class="expect-body">Complete the form below with your event details. The more information you provide, the better Gift can assess the fit.</p>
+  </div>
+  <div class="expect-item">
+    <div class="expect-num">02</div>
+    <h3 class="expect-title">Response Within 48hrs</h3>
+    <p class="expect-body">Every inquiry is personally reviewed. You'll receive a response within 48 hours to discuss availability and next steps.</p>
+  </div>
+  <div class="expect-item">
+    <div class="expect-num">03</div>
+    <h3 class="expect-title">We Create Together</h3>
+    <p class="expect-body">Gift works closely with your team to understand your vision and deliver an experience your audience won't forget.</p>
+  </div>
+</div>
+
+<!-- FORM SECTION -->
+<div class="form-section">
+  <div class="form-sidebar">
+    <span class="eyebrow">What Gift Offers</span>
+    <h2>Every engagement is intentional.</h2>
+    <ul class="sidebar-list">
+      <li>Event Hosting & Master of Ceremonies</li>
+      <li>Panel Moderation & Facilitation</li>
+      <li>Keynote & Speaking Engagements</li>
+      <li>Corporate Events & Conferences</li>
+      <li>Community & Faith-Based Gatherings</li>
+      <li>Brand Activations & Launches</li>
+    </ul>
+    <div class="sidebar-note">
+      <p><strong>Response time:</strong> All inquiries are reviewed within 48 hours. For urgent requests, please note your event date clearly in the form.</p>
+    </div>
+  </div>
+
+  <div class="form-main">
+    <h3>Tell us about your event</h3>
+    <p class="sub">Fill in the details below and Gift's team will be in touch shortly.</p>
+
+    <form id="bookingForm" novalidate>
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label for="firstName">First Name *</label>
+          <input type="text" id="firstName" name="firstName" placeholder="Jane" required>
+        </div>
+
+        <div class="form-group">
+          <label for="lastName">Last Name *</label>
+          <input type="text" id="lastName" name="lastName" placeholder="Smith" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" placeholder="jane@company.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000">
+        </div>
+
+        <div class="form-group full">
+          <label for="organization">Organization / Company *</label>
+          <input type="text" id="organization" name="organization" placeholder="Your organization name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="eventType">Type of Engagement *</label>
+          <select id="eventType" name="eventType" required>
+            <option value="" disabled selected>Select one</option>
+            <option>Event Hosting / MC</option>
+            <option>Panel Moderation</option>
+            <option>Keynote / Speaking</option>
+            <option>Corporate Conference</option>
+            <option>Community Event</option>
+            <option>Brand Activation / Launch</option>
+            <option>Faith-Based Event</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="eventDate">Event Date *</label>
+          <input type="date" id="eventDate" name="eventDate" required>
+        </div>
+
+        <div class="form-group">
+          <label for="location">Event Location / City *</label>
+          <input type="text" id="location" name="location" placeholder="Atlanta, GA" required>
+        </div>
+
+        <div class="form-group">
+          <label for="attendance">Expected Attendance</label>
+          <select id="attendance" name="attendance">
+            <option value="" disabled selected>Select range</option>
+            <option>Under 50</option>
+            <option>50 – 150</option>
+            <option>150 – 500</option>
+            <option>500 – 1,000</option>
+            <option>1,000+</option>
+          </select>
+        </div>
+
+
+        <div class="form-group full">
+          <label for="eventDescription">Tell us about your event *</label>
+          <textarea id="eventDescription" name="eventDescription" placeholder="Share details about your event theme, goals, audience, format, and anything else that would help Gift understand your vision." required></textarea>
+        </div>
+
+        <div class="form-group full">
+          <label for="referral">How did you hear about Gift?</label>
+          <select id="referral" name="referral">
+            <option value="" disabled selected>Select one</option>
+            <option>Instagram</option>
+            <option>YouTube / Podcast</option>
+            <option>Word of Mouth / Referral</option>
+            <option>Google Search</option>
+            <option>Attended a Previous Event</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div class="form-submit">
+        <button type="submit" class="submit-btn">Send Inquiry</button>
+        <p class="form-note">By submitting this form, you agree to be contacted regarding your inquiry. Your information will never be shared with third parties.</p>
+      </div>
+
+      <div class="success-msg" id="successMsg">
+        <h4>Thank you for reaching out!</h4>
+        <p>Your inquiry has been received. Gift's team will review your details and respond within 48 hours. We look forward to creating something memorable with you.</p>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<!-- FAQ + BOOKING POLICY -->
+<div class="faq-section">
+  <div class="faq-inner">
+
+    <div class="faq-col">
+      <span class="eyebrow">Frequently Asked Questions</span>
+      <h2 class="faq-title">What to Know<br>Before You Book</h2>
+
+      <div class="faq-item">
+        <h4>How far in advance should I book?</h4>
+        <p>As soon as possible. The ideal timeline is at least one month in advance to allow proper scheduling and preparation. Shorter timelines are considered on a case by case basis.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>What types of events does Gift host?</h4>
+        <p>Gift works across a wide range of events including corporate conferences, community gatherings, faith-based events, panel discussions, brand activations, and speaking engagements.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Where is Gift available?</h4>
+        <p>Gift is based in Atlanta, Georgia and is available for events locally and across the United States.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>How long does it take to hear back?</h4>
+        <p>All inquiries are personally reviewed and responded to within 48 hours. For time-sensitive requests, please make note of your event date in the form.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Does Gift do virtual events?</h4>
+        <p>Yes. Gift hosts both in-person and virtual events. Please indicate the format in your inquiry.</p>
+      </div>
+    </div>
+
+    <div class="faq-col">
+      <span class="eyebrow">Booking Policy</span>
+      <h2 class="faq-title">Important<br>Details</h2>
+
+      <div class="faq-item">
+        <h4>Deposit and Payment</h4>
+        <p>A non-refundable deposit is required to secure your date. The balance is due 7 days before the event.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Cancellations</h4>
+        <p>Cancellations made less than 14 days before the event date may be subject to the full booking fee. Please reach out as early as possible if your plans change.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Contract</h4>
+        <p>A formal agreement will be provided once your inquiry is approved. No date is confirmed until the contract is signed and the deposit is received.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Still have questions?</h4>
+        <p>Reach out directly at <a href="mailto:hello@giftnwosu.com">hello@giftnwosu.com</a> and Gift's team will be happy to help.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-bottom">
+    <a href="index.html" class="f-logo">Gift Nwosu</a>
+    <p class="f-copy">&copy; 2026 Gift Nwosu. All rights reserved.</p>
+    <a href="index.html" class="f-back">← Back to Home</a>
+  </div>
+</footer>
+
+<script>
+// ═══════════════════════════════════════════════════
+// GOOGLE SHEETS INTEGRATION via Google Apps Script
+// 
+// SETUP INSTRUCTIONS (takes ~10 minutes):
+// 1. Go to sheets.google.com → create a new sheet
+// 2. Name columns: Timestamp, First Name, Last Name, Email, Phone,
+//    Organization, Event Type, Event Date, Location, Attendance,
+//    Description, Referral
+// 3. Go to Extensions → Apps Script
+// 4. Paste this code:
+//
+//    function doPost(e) {
+//      var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+//      var data = JSON.parse(e.postData.contents);
+//      sheet.appendRow([
+//        new Date(), data.firstName, data.lastName, data.email,
+//        data.phone, data.organization, data.eventType, data.eventDate,
+//        data.location, data.attendance,
+//        data.eventDescription, data.referral
+//      ]);
+//      return ContentService.createTextOutput(JSON.stringify({result:'success'}))
+//        .setMimeType(ContentService.MimeType.JSON);
+//    }
+//
+// 5. Click Deploy → New deployment → Web app
+// 6. Execute as: Me | Who has access: Anyone
+// 7. Copy the Web App URL
+// 8. Replace PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE below with that URL
+// ═══════════════════════════════════════════════════
+
+const GOOGLE_SCRIPT_URL = 'PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE';
+
+document.getElementById('bookingForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const btn = document.querySelector('.submit-btn');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  btn.style.opacity = '0.7';
+
+  const formData = {
+    firstName:        document.getElementById('firstName').value,
+    lastName:         document.getElementById('lastName').value,
+    email:            document.getElementById('email').value,
+    phone:            document.getElementById('phone').value,
+    organization:     document.getElementById('organization').value,
+    eventType:        document.getElementById('eventType').value,
+    eventDate:        document.getElementById('eventDate').value,
+    location:         document.getElementById('location').value,
+    attendance:       document.getElementById('attendance').value,
+    eventDescription: document.getElementById('eventDescription').value,
+    referral:         document.getElementById('referral').value,
+  };
+
+  try {
+    await fetch(GOOGLE_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(formData)
+    });
+    // no-cors means we can't read response assume success
+    document.getElementById('bookingForm').style.opacity = '0.3';
+    document.getElementById('successMsg').style.display = 'block';
+    document.getElementById('successMsg').scrollIntoView({behavior:'smooth', block:'center'});
+  } catch(err) {
+    btn.textContent = 'Send Inquiry';
+    btn.disabled = false;
+    btn.style.opacity = '1';
+    alert('Something went wrong. Please email hello@giftnwosu.com directly.');
+  }
+});
+</script>
+
+</body>
+</html>
